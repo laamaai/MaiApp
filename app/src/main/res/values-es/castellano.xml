@@ -2,6 +2,8 @@
 <resources>
  <string name="str_textview">Hola Mundo!!!</string>
  <string name="str_button">Cambiar Idioma</string>
+
+
  <!--   <string name="pista1">
         "En las calles de Pamplona hay varias estatuas dedicadas a escritores, pero solo en una de ellas el autor representado está escribiendo. \n \n"
         "Sitúese frente a ella."

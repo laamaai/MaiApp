@@ -1,5 +1,6 @@
 package com.example.maider.maiapp;
 
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -72,6 +73,7 @@ public class Tab3 extends Fragment{
         String[] types = getResources().getStringArray(R.array.languages);
         b.setItems(types, new DialogInterface.OnClickListener() {
 
+            @TargetApi(Build.VERSION_CODES.N)
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -80,7 +82,7 @@ public class Tab3 extends Fragment{
                 if (which==1){
                     //Aqui hacer referencia a la carpeta de euskera.xml
 
-                    Locale locale = new Locale("eu");
+                    Locale locale = new Locale("euskera");
                     config.locale =locale;
                 }else{
                     //Aqui hacer referencia a la carpeta de castellano.xml

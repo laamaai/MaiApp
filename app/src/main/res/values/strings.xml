@@ -4,7 +4,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <!-- neww-->
     <attr name="londrinaFont" />
-
     <string name="title_activity_splash">Splash</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -16,7 +15,6 @@
         "Frente a él tenía una pequeña caja de madera, del tamaño de las que suelen contener un reloj. Cuando la abrió y observó el dedo cortado en el interior, pensó que se trataba de una broma. Era demasiada coincidencia que aquel paquete le hubiera llegado en plena semana del famoso encuentro de novela negra que se celebraba en la ciudad. Pero al recibir la llamada del director del Festival denunciando que el famoso escritor de best seller Martín Belzunce había desaparecido sin dejar rastro, supo que el asunto era serio.\n \n"
         "Junto al macabro contenido, había un lápiz de memoria. El inspector lo introdujo en el ordenador y pulsó el PLAY…"
     </string>
-
 
     <string name="str_es" >Español</string>
     <string name="str_eu" >Euskera</string>
