@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="str_textview">Hola Mundo!!!</string>
+ <string name="str_button">Cambiar Idioma</string>
+ <!--   <string name="pista1">
+        "En las calles de Pamplona hay varias estatuas dedicadas a escritores, pero solo en una de ellas el autor representado está escribiendo. \n \n"
+        "Sitúese frente a ella."
+    </string>
+
+    <string name="pista2">
+        "Busque el edificio donde estuvo instalado el primer Instituto de Segunda Enseñanza de Navarra. En él estudió un famoso autor de la llamada Generación del 98. \n \n"
+        "Colóquese frente a su puerta."
+    </string>
+
+    <string name="pista3">
+        "Localice el primer edificio modernista que se construyó en la ciudad. Cerca de él hay un comercio con el nombre de un famoso héroe de la mitología griega. \n \n "
+        "Enfréntese a su estrella."
+    </string>
+
+    <string name="pista4">
+        "Encuentre el lugar donde, durante varios siglos, estuvo situada la cárcel de Pamplona. Muy cerca hay un edificio gótico que sigue albergando la misma institución que se instaló allí en el siglo XVI. \n \n"
+        "Sitúese bajo su dintel."
+    </string>
+
+    <string name="pista5">
+        "Si quiere liberar al señor Belzunce, acuda al sitio en el que se alzaba la plaza de toros más antigua que tuvo Pamplona. Una vez allí, deberá encontrar la única columna rematada por un capitel jónico que existe en el lugar. \n \n"
+        "¡Tóquela!"
+    </string>
+
+    <string name="acertijo1">
+        "Una mañana fui a retirar dinero del cajero automático y me fue imposible, de modo que, para solucionar el problema, llamé al Servicio de Atención al Cliente. Esta fue la conversación: \n"
+        "-Yo: Buenos días, no sé qué sucede, mi clave es distinta y, por alguna razón, no puedo sacar efectivo. \n"
+        "-Servicio de Atención al Cliente: Un momento, por favor, no se retire. \n"
+        "Tras unos segundos, en los que escuché a mi interlocutor teclear en el ordenador, la voz regresó: \n"
+        "-Servicio de Atención al Cliente: Disculpe la espera. A partir de este instante, su clave ya es otra. ¿Desea algo más? \n "
+        "-Yo: No, muchas gracias. \n"
+        "Al teclear la nueva clave, pude al fin sacar dinero. ¿Cuál era la antigua y cuál es la nueva? "
+    </string>
+
+    <string name="acertijo2">
+        "Si quiere tener acceso a una nueva pista, rellene el siguiente cuadro teniendo en cuenta las instrucciones: \n"
+        "a) Los números 3, 6, 8 están en la horizontal superior. \n"
+        "b) Los números 5, 7, 9 están en la horizontal inferior. \n"
+        "c) Los números 1, 2, 3, 6, 7, 9 no están en la vertical izquierda. \n"
+        "d) Los números 1, 3, 4, 5, 8, 9 no están en la vertical derecha. \n"
+    </string>
+
+    <string name="acertijo3">
+        "Anteayer, Juan tenía 15 años; el año que viene cumplirá 18. \n"
+        "¿Qué día es hoy?"
+    </string>
+
+    <string name="acertijo4">
+        "Veamos cúanto sabe usted de números, inspector. \n \n"
+        "La clave para acceder a la siguiente pista es una cifra de seis dígitos que debe reunir las siguientes condiciones. \n \n"
+        "a) Ninguno de ellos es impar. \n"
+        "b) El primero es un tercio del quinto y la mitad del tercero. \n"
+        "c) El segundo es el menor de todos. \n"
+        "d) El último es la diferencia entre el cuarto y el quinto."
+    </string>
+
+    <string name="acertijo5">
+        "Un grupo de policías quiere infiltrar a uno de sus agentes en un club clandestino; para ello, primero deben averiguar la contraseña que les dará acceso al interior, de modo que deciden vigilar el lugar. \n"
+        "A los diez minutos, un tipo se acerca a la puerta y llama. Una voz pronuncia "18", a lo que él responde: "9", tras lo que le dejan pasar. Al cabo de un rato, otro hombre aparece y llama. En esta ocasión la voz señala:"8", a lo que el recién llegado contesta:"4" para que le franqueen la entrada, y apenas un par de minutos después, un nuevo visitante responde "7" al "14" planteado desde el interior. \n"
+        "Los policías creen haber dado al fin con la clave, de modo que deciden enviar al agente de incógnito. Al llamar, la voz dice: "0", y el contesta: "0". Pero la puerta no sólo no se abre, sino que le disparan a través de ella. \n"
+        "Convencidos de que el sistema de claves que han desentrañado es correcto, los policías deciden intentarlo una vez más. Otro agente se acerca despacio y, tras golpear con los nudillos, escucha: "6",a lo que responde "3" con idéntico resultado que su compañero. \n \n"
+        "¿Cuáles eran las claves correctas que tenían que haber pronunciado los policías para entrar?"
+    </string>
+
+    <string name="respuesta1">
+        "Muy bien. \n"
+        "Ha acertado, inspector. \n \n"
+        "Pero no crea que todo va a ser tan fácil... \n"
+        "La siguiente pista le llevará a otro lugar de Pamplona relacionado con un escritor. \n \n"
+        "El tiempo corre... "
+    </string>
+
+    <string name="respuesta2">
+        "¡Enhorabuena! \n \n"
+        "Está usted un poco más cerca de tu destino."
+    </string>
+
+    <string name="respuesta3">
+        "¡Es correcto! \n \n"
+        "Se ha ganado el derecho a una nueva pista."
+    </string>
+
+    <string name="respuesta4">
+        "¡Muy bien! \n \n"
+        "Empiezo a creer que es usted un digno rival. \n"
+        "Solo una nueva pista y un último acertijo nos separan ya..."
+    </string>-->
+
+</resources>
