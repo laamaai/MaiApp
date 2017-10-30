@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id = "@+id/inicio"
+    android:background="@drawable/fondo"
+    android:text= "@string/inicio"
     tools:context="com.example.maider.maiapp.MainActivity$PlaceholderFragment">
 
     <TextView

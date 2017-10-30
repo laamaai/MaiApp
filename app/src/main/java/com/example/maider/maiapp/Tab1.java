@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 import static android.support.v7.widget.TintTypedArray.obtainStyledAttributes;
 
 public class Tab1 extends Fragment {
@@ -24,8 +26,8 @@ private TextView textView;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab1, container, false);
-
         TextView btn = (TextView)rootView.findViewById(R.id.button);
+
         btn.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -34,7 +36,6 @@ private TextView textView;
                 startActivity(intent);
             }
         });
-
 
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
@@ -47,6 +48,7 @@ private TextView textView;
 
     private void onCreating(){
         int[] attrs = new int[]{R.attr.selectableItemBackgroundBorderless};
+
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs);
         int backgroundRes = typedArray.getResourceId(0,0);
 

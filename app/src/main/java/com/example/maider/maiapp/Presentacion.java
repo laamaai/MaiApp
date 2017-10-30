@@ -8,20 +8,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class Presentacion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentacion);
-        Typeface face=Typeface.createFromAsset(getAssets(),"font/MouseMemoirs-Regular.ttf");
-        TextView txt = (TextView)findViewById(R.id.txtPresentacion);
-        txt.setTypeface(face);
+        Calligrapher cali = new Calligrapher(this);
+        cali.setFont(this,"font/Londrina.ttf",true);
 
     }
 
     public boolean onTouchEvent(MotionEvent event){
-        Intent intent = new Intent(this, pantalla2.class);
+        Intent intent = new Intent(this, presentacion2.class);
         startActivity(intent);
         return super.onTouchEvent(event);
     }

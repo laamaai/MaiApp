@@ -1,12 +1,14 @@
 package com.example.maider.maiapp;
 
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -24,7 +26,6 @@ public class Tab2 extends Fragment {
 
         TextView title = (TextView)rootView.findViewById(R.id.section_label);
         title.setTypeface(font);
-
 
         return rootView;
     }

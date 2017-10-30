@@ -1,5 +1,6 @@
 package com.example.maider.maiapp;
 
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -29,17 +30,17 @@ import android.widget.Toast;
 import android.content.res.Configuration;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity   {
+import me.anwarshahriar.calligrapher.Calligrapher;
+
+public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     private ViewPager mViewPager;
 
     private Configuration config = new Configuration();
-    Button btn1;
-    Button btn2;
-    MediaPlayer mediaPlayer;
-    MediaPlayer mp;
+
+    int idioma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,70 +59,60 @@ public class MainActivity extends AppCompatActivity   {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        Calligrapher cali = new Calligrapher(this);
+        cali.setFont(this,"font/Londrina.ttf",true);
 
-        /*
-       TabWidget tw = (TabWidget)tabLayout.findViewById(android.R.id.tabs);
-       View
-       Sonido
-       mp = MediaPlayer.create(this,R.raw.supermario);
-       mp.start();
-
-*/
 
     }
-
-   /* @Override
-    public void onPause(){
-        super.onPause();
-        mp.stop();
-
-    }
-    @Override
-    public void onStop(){
-        super.onStop();
-        mp.stop();
-
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        mp.stop();
-
-    }*/
-
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
-
-
-
         return true;
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-      //  int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-      //  if (id == R.id.action_settings) {
-      //      return true;
-      //  }
-
-
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            showDialog();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
+    private void showDialog() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        b.setTitle(getResources().getString(R.string.str_button));
+        String[] types = getResources().getStringArray(R.array.languages);
+        b.setItems(types, new DialogInterface.OnClickListener() {
+
+            @TargetApi(Build.VERSION_CODES.N)
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent refresh;
+                if (which == 1) {
+                    Locale locale = new Locale("eu");
+                    config.locale = locale;
+                    idioma = 1;
+                } else {
+                    Locale locale = new Locale("es");
+                    config.locale = locale;
+                    idioma = 0;
+                }
+                getResources().updateConfiguration(config, null);
+                refresh = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(refresh);
+                finish();
+            }
+
+
+        });
+        b.show();
+    }
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -140,18 +131,15 @@ public class MainActivity extends AppCompatActivity   {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
+
                     Tab1 tab1 = new Tab1();
                     return tab1;
                 case 1:
                     Tab2 tab2 = new Tab2();
                     return tab2;
-                case 2:
-                    Tab3 tab3 = new Tab3();
-                    return tab3;
                 default:
                     return null;
             }
-
 
 
         }
@@ -159,19 +147,23 @@ public class MainActivity extends AppCompatActivity   {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Inicio";
-                case 1:
-                    return "Información";
-                case 2:
-                    return "Ajustes";
-            }
+            //If para el idioma, y dependiendo del idioma que tenga que lo cambie
+            //Del showDialog tiene que venir aqui tambien
+
+                switch (position) {
+                    case 0:
+                        String nombre = getResources().getString(R.string.inicio);
+                        return nombre;
+                    case 1:
+                        String info = getResources().getString(R.string.informacion);
+                        return info;
+                }
+
             return null;
         }
     }

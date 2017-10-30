@@ -2,6 +2,13 @@
 <resources>
   <string name="str_textview">jaizo!!!</string>
   <string name="str_button">Aldatu hizkuntza</string>
+  <string name="action_settings">Ajjjj</string>
+  <string name="inicio">Hasiera</string>
+  <string name="informacion"> Informazioa </string>
+  <string name="respuesta">Erantzuna</string>
+  <string name="large_text">
+
+  </string>
   <!--  <string name="pista1">
     </string>
 

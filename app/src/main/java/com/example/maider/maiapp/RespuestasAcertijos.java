@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class RespuestasAcertijos extends AppCompatActivity {
 
     @Override
@@ -12,8 +14,7 @@ public class RespuestasAcertijos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_respuestas_acertijos);
 
-        Typeface face=Typeface.createFromAsset(getAssets(),"font/MouseMemoirs-Regular.ttf");
-        //TextView txt = (TextView)findViewById(R.id.txt_Present);
-        //txt.setTypeface(face);
+        Calligrapher cali = new Calligrapher(this);
+        cali.setFont(this,"font/Londrina.ttf",true);
     }
 }
