@@ -43,7 +43,6 @@ public class Tab1 extends Fragment {
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(getActivity(), Presentacion.class);
                 startActivity(intent);
             }
@@ -61,14 +60,12 @@ public class Tab1 extends Fragment {
 
     private void onCreating(){
         int[] attrs = new int[]{R.attr.selectableItemBackgroundBorderless};
-
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs);
         int backgroundRes = typedArray.getResourceId(0,0);
 
         typedArray.recycle();
         textView.setBackgroundResource(backgroundRes);
         textView.setClickable(true);
-
 
     }
 
