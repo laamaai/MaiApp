@@ -3,7 +3,9 @@ package com.example.maider.maiapp;
 /**
  * Created by Maider on 14/10/2017.
  */
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
@@ -15,12 +17,22 @@ import android.widget.Button;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 import static android.support.v7.widget.TintTypedArray.obtainStyledAttributes;
 
 public class Tab1 extends Fragment {
-private TextView textView;
+    private TextView textView;
+    private String PREFS_KEY = "mispreferencias";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,12 +41,13 @@ private TextView textView;
         TextView btn = (TextView)rootView.findViewById(R.id.button);
 
         btn.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(getActivity(), Presentacion.class);
                 startActivity(intent);
             }
+
         });
 
         String font_path = "font/Londrina.ttf";
@@ -58,10 +71,6 @@ private TextView textView;
 
 
     }
-
-
-
-
 
 
 }

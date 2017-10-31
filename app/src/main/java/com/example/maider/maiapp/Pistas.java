@@ -30,7 +30,7 @@ public class Pistas extends AppCompatActivity {
             TextView txt = (TextView)findViewById(R.id.txtPista);
             txt.setText(pistas.get(0));
         }else{
-            //leer el fichero, coger el número de la pista y mostrar esa pista
+            //leer el activitis, coger el número de la pista y mostrar esa pista
 
         }
 
@@ -43,6 +43,7 @@ public class Pistas extends AppCompatActivity {
         pistas.add(getResources().getString(R.string.pista4));
         pistas.add(getResources().getString(R.string.pista5));
     }
+
 
 
 }
