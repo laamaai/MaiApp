@@ -1,9 +1,12 @@
 package com.example.maider.maiapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -22,11 +25,22 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 public class Pistas extends AppCompatActivity {
 
     ArrayList<String> pistas = new ArrayList<String>();
+    Button IrMapa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pistas);
+
+        IrMapa = (Button)findViewById(R.id.btnAvanzarMapa);
+        IrMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Pistas.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Calligrapher cali = new Calligrapher(this);
         cali.setFont(this,"font/Londrina.ttf",true);
         cargarArray();
