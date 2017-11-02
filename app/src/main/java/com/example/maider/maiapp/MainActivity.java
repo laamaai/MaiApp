@@ -33,13 +33,9 @@ import java.util.Locale;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class MainActivity extends AppCompatActivity {
-
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
     private ViewPager mViewPager;
-
     private Configuration config = new Configuration();
-
     int idioma;
 
     @Override
@@ -114,10 +110,6 @@ public class MainActivity extends AppCompatActivity {
         b.show();
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 
@@ -152,10 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            //If para el idioma, y dependiendo del idioma que tenga que lo cambie
-            //Del showDialog tiene que venir aqui tambien
-
-                switch (position) {
+            switch (position) {
                     case 0:
                         String nombre = getResources().getString(R.string.inicio);
                         return nombre;
@@ -163,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                         String info = getResources().getString(R.string.informacion);
                         return info;
                 }
-
             return null;
         }
     }

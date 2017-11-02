@@ -32,7 +32,6 @@ import static android.support.v7.widget.TintTypedArray.obtainStyledAttributes;
 
 public class Tab1 extends Fragment {
     private TextView textView;
-    private String PREFS_KEY = "mispreferencias";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
