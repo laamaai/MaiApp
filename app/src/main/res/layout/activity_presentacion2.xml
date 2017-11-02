@@ -8,7 +8,6 @@
     tools:context="com.example.maider.maiapp.presentacion2">
 
 
-
     <TextView
         android:id="@+id/txtt"
         android:layout_width="330dp"
