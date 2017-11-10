@@ -9,6 +9,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.maider.maiapp.R;
@@ -38,6 +40,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     int cont = 0;
     Boolean darkMode = false;
 
+    ImageButton Normal,Satelite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,6 +50,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
+
+        Normal = (ImageButton)findViewById(R.id.btnMapaNormal);
+        Satelite = (ImageButton)findViewById(R.id.btnMapaSatelite);
+
+        Satelite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mGoogleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            }
+        });
+
+        Normal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            }
+        });
     }
 
     @Override
@@ -123,6 +144,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //Place current location marker
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+
+        int PistaLocalizacion = 1;
+
+
+        //Sacar la distancia de donde estamos hasta la localizacion en metros o kilometros
+        Location locationA = new Location("punto A");
+        locationA.setLatitude(42.813263);
+        locationA.setLongitude(-1.646436 );
+
+        Location locationB = new Location("puntoB");
+        locationB.setLatitude(location.getLatitude());
+        locationB.setLongitude(location.getLongitude());
+
+        //Si se divide entre 1000 se pone en kilometros, sino en metros
+        float distance = locationB.distanceTo(locationA);
+        Toast.makeText(getBaseContext(), "Se encuentra a una distancia de: " + distance + "m",
+                Toast.LENGTH_SHORT).show();
+        if(distance <= 5){
+            switch (PistaLocalizacion){
+                case 1:
+
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+            }
+        }
+
         //move map camera
         if (cont == 0) {
             mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,17));
