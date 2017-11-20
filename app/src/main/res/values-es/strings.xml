@@ -105,4 +105,9 @@
         "Solo una nueva pista y un último acertijo nos separan ya..."
     </string>-->
 
+    <string name = "acertijoRespuesta1"></string>
+    <string name = "acertijoRespuesta2"></string>
+    <string name = "acertijoRespuesta3"></string>
+    <string name = "acertijoRespuesta4"></string>
+    <string name = "acertijoRespuesta5"></string>
 </resources>

@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         cali.setFont(this,"font/Londrina.ttf",true);
 
 
+
     }
 
     @Override
@@ -123,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-
                     Tab1 tab1 = new Tab1();
                     return tab1;
                 case 1:

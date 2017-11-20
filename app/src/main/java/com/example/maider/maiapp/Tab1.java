@@ -42,7 +42,7 @@ public class Tab1 extends Fragment {
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Presentacion.class);
+                Intent intent = new Intent(getActivity(), PasaPagina.class);
                 startActivity(intent);
             }
 

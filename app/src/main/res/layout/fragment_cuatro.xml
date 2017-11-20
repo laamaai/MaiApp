@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    tools:context="com.example.maider.maiapp.Pistas">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.maider.maiapp.Cuatro">
 
     <TextView
         android:id="@+id/txtPista"
@@ -22,34 +20,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="109dp"
-        android:layout_height="28dp"
-        android:text="Switch"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.922" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="351dp"
-        android:layout_height="21dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="400dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtPista"
-        app:layout_constraintHorizontal_bias="0.0" />
 
     <Button
         android:id="@+id/btnAvanzarMapa"
