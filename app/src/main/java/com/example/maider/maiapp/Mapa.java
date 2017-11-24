@@ -45,15 +45,12 @@ public class Mapa extends Fragment implements OnMapReadyCallback,
     Marker mCurrLocationMarker;
     int cont = 0;
     Boolean darkMode = false;
-
     ImageButton Normal, Satelite;
 
 
     public void onCreate(Bundle savedInstanceState, LayoutInflater inflater, ViewGroup container) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_mapa, container, false);
-
-
         mapFrag = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
 
@@ -252,8 +249,6 @@ public class Mapa extends Fragment implements OnMapReadyCallback,
                 return;
             }
 
-            // other 'case' lines to check for other
-            // permissions this app might request
         }
     }
 }

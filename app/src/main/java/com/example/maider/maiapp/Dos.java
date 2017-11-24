@@ -6,7 +6,9 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,8 +41,8 @@ public class Dos extends Fragment {
         ImageButton btn = (ImageButton)view.findViewById(R.id.btnPlay);
         btn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getActivity(), Tres.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getActivity(), Tres.class);
+                //startActivity(intent);
             }
         });
         return view;

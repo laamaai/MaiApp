@@ -7,7 +7,7 @@
  <string name="informacion"> Informacion </string>
     <string name="respuesta">Respuesta</string>
  <string name="large_text">
-        "Pamplona.\n"
+        "<font color="#B40431">Pamp</font>lona.\n"
         "Enero, 2018,9:00 h. \n \n"
         "Cuando el inspector entró en su despacho, observó un paquete sobre su mesa. Un agente le indicó que lo había traído un mensajero a primera hora y que el objeto había pasado los preceptivos controles de seguridad, de modo que cubrió el respaldo de su silla con la chaqueta, se sentó y rasgó el papel que lo envolvía. \n"
         "Frente a él tenía una pequeña caja de madera, del tamaño de las que suelen contener un reloj. \n "

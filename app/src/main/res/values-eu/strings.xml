@@ -7,49 +7,109 @@
   <string name="informacion"> Informazioa </string>
   <string name="respuesta">Erantzuna</string>
   <string name="large_text">
-
+    "Iruña.\n"
+    "Urtarrila, 2018, 9:00ak. \n"
+    "Bere bulegoan sartzean, inspektoreak pakete bat ikusi zuen mahai gainean. Agente batek azaldu zion mezulari batek ekarria zuela goiz-goizean, eta behar diren segurtasun kontrol guztiak pasatuak zituela; beraz, inspektoreak, jakarekin bere aulkiaren bizkarra estalita, eseri eta urratu zuen paketearen paperezko bilgarria. \n"
+    "Parean zurezko kutxa txiki bat zuen, barrenean erloju bat eduki ohi dutenen tamainakoa. \n"
+    "Broma bat zela uste izan zuen ireki zuelarik eta barnean hatz moztua ikusi zuelarik. Kasualitate handiegia zen pakete hori ailegatzea noiz eta hirian eleberri beltzaren gaineko topaketa famatua gauzatzen ari zen astean. Baina afera serioa zela jakin zuen Jaialdiko zuzendariaren deiak salatu zionean Martín Belzunce, best seller-en idazle ezaguna, desagertua zela arrastorik utzi gabe. \n "
+    "Eduki lazgarriaren ondoan, USB memoria bat zegoen. Inspektoreak ordenagailuan sartu zuen eta PLAY sakatu zuen… \n "
   </string>
-  <!--  <string name="pista1">
+    <string name="pista1">
+      "Iruñeko karriketan zenbait estatua daude idazleen omenez, baina horietako bakar batean ari da egilea idazten. \n \n"
+      "Aurkitu zein den. "
     </string>
 
     <string name="pista2">
+      "Bila ezazu zer eraikinetan egon zen Nafarroako Bigarren Hezkuntzako lehen Institutua; bertan idazle famatu batek ikasi zuen, 98ko belaunaldikoa bera. \n \n"
+      "Para zaitez haren atearen parean."
     </string>
 
     <string name="pista3">
+      "Aurkitu hirian egindako lehen eraikin modernista. Saltoki bat du hurbil, Greziako mitologiako heroi famatu baten izena duena. \n \n"
+      "Aurre egin haren izarrari."
     </string>
 
     <string name="pista4">
+      "Aurkitu non egon zen, hainbat mendetan, Iruñeko kartzela. Hurbil-hurbil eraikin gotiko bat dago. Erakunde bat bertan kokatu zen XVI. mendean eta bertan segitzen du gaur egun. \n \n"
+      "Para zaitez haren ateburuaren azpian."
     </string>
 
     <string name="pista5">
+      "Belzunce jauna askatu nahi baduzu, zoaz Iruñeko zezen-plaza zaharrena zegoen lekura. Han zutabe bakar bat dago buruan kapitel joniar bat duena. Zure lana, hura aurkitzea. Eta behin aurkituta... \n \n"
+      "Uki ezazu!"
     </string>
 
     <string name="acertijo1">
+       "Goiz batean kutxazain automatikora jo nuen, dirua ateratzera. Ezinezkoa egin zitzaidan, haatik. Arazoa konpontzeko, Bezeroari Arreta emateko Zerbitzura deitu nuen. Hona gure solasaldia: \n"
+        "-Nik: Egun on, ez dakit zer gertatzen den, nire pasa-hitza desberdina da eta, auskalo zergatik, ezin dut eskudirurik atera. \n"
+        "-Bezeroari Arreta emateko Zerbitzua: Memento bat, faborez, ez zaitez joan.  \n"
+        "Segundo batzuk geroago nire solaskidea entzun nuen ordenagailuan tekleatzen; ondoren, ahotsa itzuli zen: \n"
+        "-Bezeroari Arreta emateko Zerbitzua: Barkatu itxaronaldia. Une honetatik aurrera pasa-hitz berria duzu. Gehiagorik nahi? \n "
+        "-Nik: Ez, mila esker. \n"
+        "Pasa-hitz berria tekleatuta atera ahal izan nuen, azkenik, dirua. Zein da zaharra eta zein berria? "
+
     </string>
 
     <string name="acertijo2">
+        "Pista berri baterako sarbidea izan nahi baldin baduzu, bete ondoko laukia jarraibideak kontuan harturik:   \n"
+        "a) 3, 6, 8 zenbakiak goiko horizontalean daude.  \n"
+        "b) 5, 7, 9 zenbakiak beheko horizontalean daude.  \n"
+        "c) 1, 2, 3, 6, 7, 9 zenbakiak ez daude ezkerreko bertikalean.  \n"
+        "d) 1, 3, 4, 5, 8, 9 zenbakiak ez daude eskuineko bertikalean.  \n"
     </string>
 
     <string name="acertijo3">
+       "Herenegun, Jonek 15 urte zituen; heldu den urtean 18 beteko ditu.  \n"
+        "Zer egun da gaur?"
     </string>
 
     <string name="acertijo4">
+       "Ikusiko dugu nola zabiltzan zenbakietan, inspektorea. \n \n"
+        "Hurrengo pista atzemateko gakoa sei digituko zenbakia da, ondoko baldintzak bete behar dituena.  \n \n"
+        "a) Ez dago bakoiti bakar bat ere.  \n"
+        "b) Lehenbizikoa da bosgarrenaren herena eta hirugarrenaren erdia.  \n"
+        "c) Bigarrena da denetan txikiena.  \n"
+        "d) Azkena da laugarrenaren eta bosgarrenaren arteko kendura. "
     </string>
 
     <string name="acertijo5">
+      "Polizia talde bat bere agenteetariko bat infiltratu nahi du klub klandestino batean; horretarako, lehenik jakin behar dute barnera sartzeko pasa-hitza; hortaz, tokia zelatatzea erabaki dute. \n"
+      "Hamar minutu pasata, morroi bat atera hurbildu eta deitu egin du. Ahots batek, barnetik: “18”, eta morroiak erantzun: “9”, horren ondotik, pasatzen utzi diote. Handik pixka batera, bertze gizon bat agertu da, baita deitu ere. Oraingoan, ahotsak: “8”, eta horri etorri berriak: “4”. Atea ireki diote. Ezta bi minutu geroago ere, bertze bisitari bat. Barnetik “14” eta hark “7” erantzun. \n"
+      "Poliziek uste dutenez aurkitu dutela pasa-hitza, isilpeko agentea bidaltzea erabaki dute. Deitzean, ahotsak: “0”, eta agenteak erantzun: “0".  Baina atea ireki ez, eta gainera tiro egin diote barnetik. \n"
+      "Sinetsirik pasa-hitzen sistema zuzen asmatu dutela, poliziek erabaki dute behin berriz saiatzea. Beste agente bat poliki-poliki eta atean kax-kax egin ondoan aditu du: “6”, eta horri erantzun: “3”. Emaitza, lagunaren patu bera. \n \n"
+      "Zein ziren sartzeko poliziek esan behar zituzten gako-hitz zuzenak? "
     </string>
 
     <string name="respuesta1">
+      Ederki.
+Asmatu duzu, inspektorea.
+Baina ez uste guztia hain erraza izanen denik…
+Hurrengo pistak nora eta Iruñeko bertze toki batera eramanen zaitu,
+hain zuzen ere idazle batekin lotua dagoen tokira.
+Orduak ordua du gainean...
+
     </string>
 
     <string name="respuesta2">
+      Zorionak.
+Pixka bat hurbilago zaude zure helmugatik.
+
     </string>
 
     <string name="respuesta3">
+      Zuzena da!
+Pista bat gehiagorako eskubidea, horra zure saria.
+
     </string>
 
     <string name="respuesta4">
-    </string>-->
+      Oso ongi!
+Sinesten hasia naiz nire neurriko aurkaria zarela.
+Pista bat gehiago eta azken igarkizuna
+bertzerik ez dugu bion artean…
+
+
+    </string>
 
 
 </resources>

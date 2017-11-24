@@ -10,6 +10,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -25,6 +26,7 @@ public class PasaPagina extends AppCompatActivity {
     SlidePagerAdapter mPagerAdapter;
     CoordinatorLayout mCoordinator;
     int page = 0;
+    Button IrMapa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,9 @@ public class PasaPagina extends AppCompatActivity {
         mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
         indicators[0].setBackgroundResource(R.drawable.indicator_selected);
+        final ImageButton bck = (ImageButton)findViewById(R.id.intro_btn_back);
+        ImageButton nxt = (ImageButton)findViewById(R.id.intro_btn_next);
+
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -48,12 +53,14 @@ public class PasaPagina extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
+            page = position;
             switch (position) {
                 case 0:
                     indicators[0].setBackgroundResource(R.drawable.indicator_selected);
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    bck.setVisibility(View.GONE);
                     break;
 
                 case 1:
@@ -61,6 +68,7 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    bck.setVisibility(View.VISIBLE);
                     break;
 
                 case 2:
@@ -68,6 +76,7 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    bck.setVisibility(View.VISIBLE);
                     break;
 
                 case 3:
@@ -75,12 +84,11 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
+                    bck.setVisibility(View.VISIBLE);
                     break;
-
                 default:
                     break;
             }
-
         }
 
         @Override
@@ -88,6 +96,22 @@ public class PasaPagina extends AppCompatActivity {
 
         }
     });
+
+        bck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                page -= 1;
+                mPager.setCurrentItem(page, true);
+            }
+        });
+
+        nxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                page += 1;
+                mPager.setCurrentItem(page, true);
+            }
+        });
 
     }
 
@@ -111,7 +135,6 @@ public class PasaPagina extends AppCompatActivity {
                 default:
                     return null;
             }
-
         }
 
         @Override

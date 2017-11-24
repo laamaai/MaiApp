@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/frcambiar"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.maider.maiapp.Cuatro">
 
@@ -11,29 +12,28 @@
         android:layout_height="336dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="40dp"
         android:background="#51000000"
         android:text=""
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnAvanzarMapa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="64dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
 
         android:text="Ir mapa"
         android:textColor="@color/cardview_light_background"
-        android:textSize="34dp"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502" />
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -6,11 +6,15 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.android.gms.maps.SupportMapFragment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,14 +40,6 @@ public class Cuatro extends Fragment {
         TextView title = (TextView)view.findViewById(R.id.txtPista);
         title.setTypeface(font);
 
-        IrMapa = (Button)view.findViewById(R.id.btnAvanzarMapa);
-        IrMapa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Mapa.class);
-                startActivity(intent);
-            }
-        });
         cargarArray();
         int n = 0;
         try{
@@ -60,9 +56,26 @@ public class Cuatro extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         TextView txt = (TextView)view.findViewById(R.id.txtPista);
         txt.setText(pistas.get(n));
+        IrMapa = (Button)view.findViewById(R.id.btnAvanzarMapa);
+        IrMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Fragment fr = new Mapa();
+                //FragmentManager frm = getActivity().getSupportFragmentManager();
+                //frm.beginTransaction().replace(R.id.frcambiar, fr).commit();
+                //Fragment fr = getActivity().getSupportFragmentManager().findFragmentById(R.id.mapitaa);
+               // FragmentTransaction transaction = getFragmentManager().beginTransaction();
+              //  transaction.replace(R.id.frcambiar, fr);
+               // transaction.addToBackStack(null);
+                //transaction.commit();
+                Intent intent = new Intent(getActivity(), Mapa.class);
+                startActivity(intent);
+
+            }
+        });
+
 
 
         return view;
@@ -75,5 +88,7 @@ public class Cuatro extends Fragment {
         pistas.add(3,getResources().getString(R.string.pista4));
         pistas.add(4,getResources().getString(R.string.pista5));
     }
+
+    //ProgressBar progress = new ProgressBar(getActivity());
 
 }

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mapitaa"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.maider.maiapp.Mapa">
 
@@ -21,7 +22,7 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
 
-        <ImageButton
+     <!--   <ImageButton
             android:id="@+id/btnMapaNormal"
             android:layout_width="72dp"
             android:layout_height="72dp"
@@ -47,7 +48,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/satelite_icon" />
+            app:srcCompat="@mipmap/satelite_icon" />-->
 
     <RelativeLayout
         android:id="@+id/RELATIVE"
@@ -63,7 +64,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/buttonMapaNormal"
+            android:id="@+id/btnMapaNormal"
             android:layout_width="190dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
@@ -72,7 +73,7 @@
             android:text="Normal" />
 
         <Button
-            android:id="@+id/buttonMapaSatelite"
+            android:id="@+id/btnMapaSatelite"
             android:layout_width="190dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
