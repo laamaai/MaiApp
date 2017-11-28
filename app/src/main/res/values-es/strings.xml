@@ -48,7 +48,7 @@
         "Tras unos segundos, en los que escuché a mi interlocutor teclear en el ordenador, la voz regresó: \n"
         "-Servicio de Atención al Cliente: Disculpe la espera. A partir de este instante, su clave ya es otra. ¿Desea algo más? \n "
         "-Yo: No, muchas gracias. \n"
-        "Al teclear la nueva clave, pude al fin sacar dinero. ¿Cuál era la antigua y cuál es la nueva? "
+        "Al teclear la nueva clave, pude al fin sacar dinero. \n\n <font color="#B40431">¿Cuál era la antigua y cuál es la nueva?</font> \n \n"
     </string>
 
     <string name="acertijo2">
@@ -105,7 +105,7 @@
         "Solo una nueva pista y un último acertijo nos separan ya..."
     </string>-->
 
-    <string name = "acertijoRespuesta1"></string>
+    <string name = "acertijoRespuesta1"> DISTINTA-OTRA </string>
     <string name = "acertijoRespuesta2"></string>
     <string name = "acertijoRespuesta3"></string>
     <string name = "acertijoRespuesta4"></string>
