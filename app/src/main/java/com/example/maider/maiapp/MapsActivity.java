@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -40,7 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     int cont = 0;
     Boolean darkMode = false;
 
-    ImageButton Normal,Satelite;
+    Button Normal,Satelite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,8 +52,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
 
-        Normal = (ImageButton)findViewById(R.id.btnMapaNormal);
-        Satelite = (ImageButton)findViewById(R.id.btnMapaSatelite);
+        Normal = (Button)findViewById(R.id.btnMapaNormal);
+        Satelite = (Button)findViewById(R.id.btnMapaSatelite);
 
         Satelite.setOnClickListener(new View.OnClickListener() {
             @Override

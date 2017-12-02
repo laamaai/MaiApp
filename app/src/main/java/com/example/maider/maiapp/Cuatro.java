@@ -70,7 +70,7 @@ public class Cuatro extends Fragment {
               //  transaction.replace(R.id.frcambiar, fr);
                // transaction.addToBackStack(null);
                 //transaction.commit();
-                Intent intent = new Intent(getActivity(), Mapa.class);
+                Intent intent = new Intent(getActivity(), MapsActivity.class);
                 startActivity(intent);
 
             }

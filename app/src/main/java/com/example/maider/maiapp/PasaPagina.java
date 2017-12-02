@@ -19,8 +19,8 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class PasaPagina extends AppCompatActivity {
 
-    static final int NUM_ITEMS = 4;
-    ImageView zero, one, two, three;
+    static final int NUM_ITEMS = 5;
+    ImageView zero, one, two, three, four;
     ImageView[] indicators;
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
@@ -37,13 +37,14 @@ public class PasaPagina extends AppCompatActivity {
         one = (ImageView) findViewById(R.id.intro_indicator_1);
         two = (ImageView) findViewById(R.id.intro_indicator_2);
         three = (ImageView) findViewById(R.id.intro_indicator_3);
-        indicators = new ImageView[]{zero, one, two, three};
+        four = (ImageView) findViewById(R.id.intro_indicator_4);
+        indicators = new ImageView[]{zero, one, two, three, four};
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
         indicators[0].setBackgroundResource(R.drawable.indicator_selected);
         final ImageButton bck = (ImageButton)findViewById(R.id.intro_btn_back);
-        ImageButton nxt = (ImageButton)findViewById(R.id.intro_btn_next);
+        final ImageButton nxt = (ImageButton)findViewById(R.id.intro_btn_next);
 
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
         @Override
@@ -60,6 +61,7 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.GONE);
                     break;
 
@@ -68,6 +70,7 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
                     break;
 
@@ -76,6 +79,7 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
                     break;
 
@@ -84,7 +88,17 @@ public class PasaPagina extends AppCompatActivity {
                     indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
                     indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
+                    break;
+                case 4:
+                    indicators[4].setBackgroundResource(R.drawable.indicator_selected);
+                    indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
+                    indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.GONE);
                     break;
                 default:
                     break;
@@ -132,6 +146,8 @@ public class PasaPagina extends AppCompatActivity {
                     return new Tres();
                 case 3:
                     return new Cuatro();
+                case 4:
+                    return new Cinco();
                 default:
                     return null;
             }
@@ -139,7 +155,7 @@ public class PasaPagina extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 }
