@@ -18,7 +18,7 @@
         android:layout_marginRight="8dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-        android:text="Jugar"
+        android:text="@string/jugar"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"

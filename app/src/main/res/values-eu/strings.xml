@@ -6,7 +6,7 @@
   <string name="inicio">Hasiera</string>
   <string name="informacion"> Informazioa </string>
   <string name="respuesta">Erantzuna</string>
-
+    <string name="jugar">Jolastu</string>
     <string name="presentacion">"Aupa. \n Desafioka ari zaizkizu nobela beltzeko idazle nafarrak. \n \n Ongi etorri erronkara. "</string>
   <string name="large_text">
     "Iruña.\n"

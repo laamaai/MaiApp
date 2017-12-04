@@ -4,6 +4,7 @@
  <string name="str_button">Cambiar Idioma</string>
  <string name="action_settings">Ajustes</string>
  <string name="inicio">Inicio</string>
+    <string name="jugar">Jugar</string>
  <string name="informacion"> Informacion </string>
     <string name="respuesta">Respuesta</string>
  <string name="large_text">

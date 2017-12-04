@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frcambiar"
+    android:background="@drawable/fondo"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.maider.maiapp.Cuatro">
 
