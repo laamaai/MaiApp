@@ -16,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 
 public class Cinco extends Fragment {
     private static final String TAG = "FragmentCinco";
@@ -39,31 +41,29 @@ public class Cinco extends Fragment {
         rp1 = (EditText)view.findViewById(R.id.primera);
         rp2 = (EditText)view.findViewById(R.id.segunda);
         btnAceptar = (Button) view.findViewById(R.id.btnAceptar);
-
+        Calligrapher cali = new Calligrapher(getActivity());
+        cali.setFont(getActivity(),"font/Londrina.ttf",true);
         //Mostramos el dialog para ver si ha acertado o no
         btnAceptar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-               corregir(Cinco.super.getView());
+                String r1 = rp1.getText().toString().toUpperCase();
+                String r2 = rp2.getText().toString().toUpperCase();
+                String resp = getString(R.string.acertijoRespuesta1);
+                String ellos = ""+r1+"-"+r2+"";
+
+                if(ellos == resp){
+                    SacarMensajeExito();
+                }else{
+                    SacarMensajeError();
+                }
+
             }
         });
 
-
-
-
-        // Calligrapher cali = new Calligrapher(getActivity());
-        // cali.setFont(getActivity(),"font/Londrina.ttf",true);
         return view;
     }
 
-    public void corregir(View v){
-        //coger los valores que nos han escrito.
-        String r1 = rp1.getText().toString().toUpperCase();
-        String r2 = rp2.getText().toString().toUpperCase();
-        String resp = getString(R.string.acertijoRespuesta1);
-        String ellos = "" +r1+"-"+r2;
-    }
 
     public void SacarMensajeExito(){
         AlertDialog.Builder builder = new AlertDialog.Builder(Cinco.super.getActivity());
@@ -73,7 +73,7 @@ public class Cinco extends Fragment {
         TextView title = (TextView) view.findViewById(R.id.title);
         ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
 
-        title.setText("Hello There!");
+        title.setText("Acertado!");
 
         imageButton.setImageResource(R.drawable.iconmap);
 
@@ -97,7 +97,7 @@ public class Cinco extends Fragment {
         TextView title = (TextView) view.findViewById(R.id.title);
         ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
 
-        title.setText("Hello There!");
+        title.setText("Fallado");
 
         imageButton.setImageResource(R.drawable.iconmap);
 
