@@ -71,14 +71,12 @@
        android:layout_marginBottom="16dp"
        android:layout_marginEnd="8dp"
        android:layout_marginStart="8dp"
-       android:onClick="corregir"
        android:text="Aceptar"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.91"
        app:layout_constraintStart_toStartOf="parent"
-       tools:ignore="MissingConstraints"
-       tools:onClick="corregir" />
+       tools:ignore="MissingConstraints" />
 
 
 </android.support.constraint.ConstraintLayout>
