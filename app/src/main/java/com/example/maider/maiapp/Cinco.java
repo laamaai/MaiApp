@@ -1,12 +1,14 @@
 package com.example.maider.maiapp;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
@@ -110,6 +116,42 @@ public class Cinco extends Fragment {
 
         builder.setView(view);
         builder.show();
+    }
+
+    public void EscribirFichero(){
+        try
+        {
+            OutputStreamWriter fout=
+                    new OutputStreamWriter(
+                            getActivity().openFileOutput("Posicion_Jugador.txt", Context.MODE_PRIVATE));
+
+            //fout.write(txtNombre.getText().toString());
+            Toast.makeText(Cinco.super.getActivity(), "Escritura correcta", Toast.LENGTH_SHORT).show();
+            fout.close();
+        }
+        catch (Exception ex)
+        {
+            Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+        }
+    }
+
+    public void LeerFichero(){
+        try
+        {
+            BufferedReader fin =
+                    new BufferedReader(
+                            new InputStreamReader(
+                                    getActivity().openFileInput("Posicion_Jugador.txt")));
+
+            String texto = fin.readLine();
+            //txtNombre.setText(texto);
+            Toast.makeText(Cinco.super.getActivity(), "Lectura correcta", Toast.LENGTH_SHORT).show();
+            fin.close();
+        }
+        catch (Exception ex)
+        {
+            Log.e("Ficheros", "Error al leer fichero desde memoria interna");
+        }
     }
 
 
