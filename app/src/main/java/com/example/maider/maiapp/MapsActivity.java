@@ -9,9 +9,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.maider.maiapp.R;
@@ -42,6 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Boolean darkMode = false;
 
     Button Normal,Satelite;
+    ProgressBar progressBarDistancia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -162,6 +165,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         float distance = locationB.distanceTo(locationA);
         Toast.makeText(getBaseContext(), "Se encuentra a una distancia de: " + distance + "m",
                 Toast.LENGTH_SHORT).show();
+
+        //Progress bar de la distancia que les queda
+        DistanciaBarraProgreso(distance);
+
+        //Sacamos la activity segun la pista
         if(distance <= 5){
             switch (PistaLocalizacion){
                 case 1:
@@ -214,6 +222,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_LOCATION );
             }
+        }
+    }
+
+
+    public void DistanciaBarraProgreso(float distancia){
+
+        try {
+            if(distancia > 1000){
+                progressBarDistancia.setProgress(0);
+            }else{
+                float formula = 100 - ((distancia * 100)/1000);
+                int formulaRedondeada = Math.round(formula);
+                progressBarDistancia.setProgress(formulaRedondeada);
+            }
+
+        }catch(NumberFormatException nfe) {
+            Log.e("Ficheros", "Error al introducir un numero");
         }
     }
 
