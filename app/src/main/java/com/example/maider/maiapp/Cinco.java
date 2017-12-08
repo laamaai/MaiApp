@@ -35,7 +35,7 @@ public class Cinco extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_cinco, container, false);
+        final View view = inflater.inflate(R.layout.fragment_cinco, container, false);
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
         TextView title = (TextView)view.findViewById(R.id.txtAcertijo1);
@@ -43,7 +43,6 @@ public class Cinco extends Fragment {
         scrollable = (TextView) view.findViewById(R.id.txtAcertijo1);
         scrollable.setMovementMethod(new ScrollingMovementMethod());
         title.setTypeface(font);
-
         rp1 = (EditText)view.findViewById(R.id.primera);
         rp2 = (EditText)view.findViewById(R.id.segunda);
         btnAceptar = (Button) view.findViewById(R.id.btnAceptar);
@@ -57,63 +56,52 @@ public class Cinco extends Fragment {
                 String r2 = rp2.getText().toString().toUpperCase();
                 String resp = getString(R.string.acertijoRespuesta1);
                 String ellos = ""+r1+"-"+r2+"";
-
-                if(ellos == resp){
+                if(resp.equals(ellos)){
                     SacarMensajeExito();
+                    //btnAceptar.setVisibility(View.GONE);
+                    //final ImageButton nxt = (ImageButton)view.findViewById(R.id.intro_btn_next);
+                    //nxt.setVisibility(View.VISIBLE);
                 }else{
                     SacarMensajeError();
                 }
-
             }
         });
 
         return view;
     }
-
-
     public void SacarMensajeExito(){
         AlertDialog.Builder builder = new AlertDialog.Builder(Cinco.super.getActivity());
-
         View view = LayoutInflater.from(Cinco.super.getActivity()).inflate(R.layout.custom_layout, null);
-
         TextView title = (TextView) view.findViewById(R.id.title);
-        ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
+        TextView cuerpo = (TextView) view.findViewById(R.id.cuerpo);
+        title.setText("Has acertado!");
+        cuerpo.setText(R.string.respuesta1);
 
-        title.setText("Acertado!");
-
-        imageButton.setImageResource(R.drawable.iconmap);
-
-        builder.setPositiveButton("Chii", new DialogInterface.OnClickListener() {
+        //EL TOAST MEJOR SI LO QUITAMOS YO CREO
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Toast.makeText(Cinco.super.getActivity(), "Has acertado", Toast.LENGTH_SHORT).show();
             }
         });
-
         builder.setView(view);
         builder.show();
     }
-
-
     public void SacarMensajeError(){
         AlertDialog.Builder builder = new AlertDialog.Builder(Cinco.super.getActivity());
-
         View view = LayoutInflater.from(Cinco.super.getActivity()).inflate(R.layout.custom_layout, null);
-
         TextView title = (TextView) view.findViewById(R.id.title);
-        ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
+        TextView cuerpo = (TextView) view.findViewById(R.id.cuerpo);
+        title.setText("Error");
+        cuerpo.setText("Has fallado, vuelve a intentarlo");
 
-        title.setText("Fallado");
-
-        imageButton.setImageResource(R.drawable.iconmap);
-
-        builder.setPositiveButton("Chii", new DialogInterface.OnClickListener() {
+        //EL TOAST MEJOR SI LO QUITAMOS
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(Cinco.super.getActivity(), "Has fallado, vuelve a intentarlo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Cinco.super.getActivity(), "Has fallado", Toast.LENGTH_SHORT).show();
             }
         });
-
         builder.setView(view);
         builder.show();
     }

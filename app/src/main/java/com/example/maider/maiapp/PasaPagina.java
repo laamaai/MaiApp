@@ -19,32 +19,24 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class PasaPagina extends AppCompatActivity {
 
-    static final int NUM_ITEMS = 5;
-    ImageView zero, one, two, three, four;
-    ImageView[] indicators;
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
-    CoordinatorLayout mCoordinator;
     int page = 0;
-    Button IrMapa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasa_pagina);
-        ImageButton mNextBtn = (ImageButton) findViewById(R.id.intro_btn_next);
-        zero = (ImageView) findViewById(R.id.intro_indicator_0);
-        one = (ImageView) findViewById(R.id.intro_indicator_1);
-        two = (ImageView) findViewById(R.id.intro_indicator_2);
-        three = (ImageView) findViewById(R.id.intro_indicator_3);
-        four = (ImageView) findViewById(R.id.intro_indicator_4);
-        indicators = new ImageView[]{zero, one, two, three, four};
+
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
-        indicators[0].setBackgroundResource(R.drawable.indicator_selected);
+
         final ImageButton bck = (ImageButton)findViewById(R.id.intro_btn_back);
         final ImageButton nxt = (ImageButton)findViewById(R.id.intro_btn_next);
+
+        Calligrapher cali = new Calligrapher(this);
+        cali.setFont(this,"font/Londrina.ttf",true);
 
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
         @Override
@@ -57,48 +49,57 @@ public class PasaPagina extends AppCompatActivity {
             page = position;
             switch (position) {
                 case 0:
-                    indicators[0].setBackgroundResource(R.drawable.indicator_selected);
-                    indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.GONE);
+                    nxt.setVisibility(View.VISIBLE);
                     break;
-
                 case 1:
-                    indicators[1].setBackgroundResource(R.drawable.indicator_selected);
-                    indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
                     break;
-
                 case 2:
-                    indicators[2].setBackgroundResource(R.drawable.indicator_selected);
-                    indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
                     break;
-
                 case 3:
-                    indicators[3].setBackgroundResource(R.drawable.indicator_selected);
-                    indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[4].setBackgroundResource(R.drawable.indicator_unselected);
                     bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
                     break;
-                case 4:
-                    indicators[4].setBackgroundResource(R.drawable.indicator_selected);
-                    indicators[1].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[2].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[0].setBackgroundResource(R.drawable.indicator_unselected);
-                    indicators[3].setBackgroundResource(R.drawable.indicator_unselected);
+                case 4: //PRIMER ACERTIJO
                     bck.setVisibility(View.VISIBLE);
-                    nxt.setVisibility(View.GONE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 5: //ESTA NO ES SU POSICIÓN ORIGINAL--> SEGUNDO
+                    //case 3
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 6: //ESTA NO ES SU POSICIÓN ORIGINAL --> TERCERO
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 7: //ESTA NO ES SU POSICIÓN ORIGINAL -->CUARTO
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 8: //ESTA NO ES SU POSICIÓN ORIGINAL -->AZKENA
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 9:
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 10:
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 11:
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
+                    break;
+                case 12:
+                    bck.setVisibility(View.VISIBLE);
+                    nxt.setVisibility(View.VISIBLE);
                     break;
                 default:
                     break;
@@ -148,6 +149,24 @@ public class PasaPagina extends AppCompatActivity {
                     return new Cuatro();
                 case 4:
                     return new Cinco();
+                case 5:
+                    return new Cuatro();
+                case 6:
+                    return new Seis();
+                case 7:
+                    return new Cuatro();
+                case 8:
+                    return new Siete();
+                case 9:
+                    return new Cuatro();
+                case 10:
+                    return new Ocho();
+                case 11:
+                    return new Cuatro();
+                case 12:
+                    return new Nueve();
+                    //case 13:
+                // return new Tres(); //con el otro video o return una nueva con el video.
                 default:
                     return null;
             }
@@ -155,7 +174,7 @@ public class PasaPagina extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 13;
         }
     }
 }

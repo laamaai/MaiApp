@@ -8,17 +8,20 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.SupportMapFragment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
@@ -33,16 +36,30 @@ public class Cuatro extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cuatro, container, false);
-        //Calligrapher cali = new Calligrapher(getActivity());
-        //cali.setFont(getActivity(),"font/Londrina.ttf",true);
+        Calligrapher cali = new Calligrapher(getActivity());
+        cali.setFont(getActivity(), "font/Londrina.ttf", true);
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
-        TextView title = (TextView)view.findViewById(R.id.txtPista);
+        TextView title = (TextView) view.findViewById(R.id.txtPista);
         title.setTypeface(font);
-
         cargarArray();
+
         int n = 0;
-        try{
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(this.getActivity().openFileInput("NumeroAcertijo.txt")));
+            StringBuilder texto = new StringBuilder();
+            while (br.readLine() != null) {
+                texto.append(br.readLine());
+            }
+            br.close();
+            n = Integer.parseInt(texto.toString());
+
+            OutputStreamWriter fout = new OutputStreamWriter(getActivity().openFileOutput("NumeroAcertijo.txt", Context.MODE_PRIVATE));
+            int num = n+1;
+            fout.write(""+num);
+            fout.close();
+
+            /*
             InputStreamReader in = new InputStreamReader(this.getResources().openRawResource(R.raw.numeros));
             BufferedReader br = new BufferedReader(in);
             String linea;
@@ -52,32 +69,21 @@ public class Cuatro extends Fragment {
             }
             br.close();
             in.close();
-            n = Integer.parseInt(texto.toString());
+            n = Integer.parseInt(texto.toString());*/
         } catch (IOException e) {
             e.printStackTrace();
         }
-        TextView txt = (TextView)view.findViewById(R.id.txtPista);
+        TextView txt = (TextView) view.findViewById(R.id.txtPista);
         txt.setText(pistas.get(n));
-        IrMapa = (Button)view.findViewById(R.id.btnAvanzarMapa);
+        IrMapa = (Button) view.findViewById(R.id.btnAvanzarMapa);
         IrMapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Fragment fr = new Mapa();
-                //FragmentManager frm = getActivity().getSupportFragmentManager();
-                //frm.beginTransaction().replace(R.id.frcambiar, fr).commit();
-                //Fragment fr = getActivity().getSupportFragmentManager().findFragmentById(R.id.mapitaa);
-               // FragmentTransaction transaction = getFragmentManager().beginTransaction();
-              //  transaction.replace(R.id.frcambiar, fr);
-               // transaction.addToBackStack(null);
-                //transaction.commit();
                 Intent intent = new Intent(getActivity(), MapsActivity.class);
                 startActivity(intent);
 
             }
         });
-
-
-
         return view;
     }
 
