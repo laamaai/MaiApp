@@ -114,8 +114,8 @@ bertzerik ez dugu bion artean…
 
     <string name = "acertijoRespuesta1"> </string>
     <string name = "acertijoRespuesta2"> 836412597 </string>
-    <string name = "acertijoRespuesta3"></string>
-    <string name = "acertijoRespuesta4"></string>
-    <string name = "acertijoRespuesta5"></string>
+    <string name = "acertijoRespuesta3">01/01</string>
+    <string name = "acertijoRespuesta4">204862</string>
+    <string name = "acertijoRespuesta5"> 4-4 </string>
 
 </resources>
