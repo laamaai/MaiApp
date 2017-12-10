@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Pamplona Negra</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <!-- neww-->
     <attr name="londrinaFont" />
     <string name="title_activity_splash">Splash</string>

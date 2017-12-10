@@ -43,13 +43,13 @@ public class Dos extends Fragment {
         scrollable = (TextView) view.findViewById(R.id.txtt);
         scrollable.setMovementMethod(new ScrollingMovementMethod());
 
-        ImageButton btn = (ImageButton)view.findViewById(R.id.btnPlay);
-        btn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        //ImageButton btn = (ImageButton)view.findViewById(R.id.btnPlay);
+       // btn.setOnClickListener(new View.OnClickListener(){
+        //    public void onClick(View v){
                 //Intent intent = new Intent(getActivity(), Tres.class);
                 //startActivity(intent);
-            }
-        });
+         //   }
+        //});
         return view;
     }
 }

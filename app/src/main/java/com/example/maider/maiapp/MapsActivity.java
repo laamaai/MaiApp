@@ -178,7 +178,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(distance <= 5){
             switch (PistaLocalizacion){
                 case 1:
-
                 case 2:
                 case 3:
                 case 4:

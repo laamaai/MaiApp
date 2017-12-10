@@ -42,6 +42,7 @@ public class Cinco extends Fragment {
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         final View view = inflater.inflate(R.layout.fragment_cinco, container, false);
+
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
         TextView title = (TextView)view.findViewById(R.id.txtAcertijo1);
@@ -69,6 +70,8 @@ public class Cinco extends Fragment {
                     //nxt.setVisibility(View.VISIBLE);
                 }else{
                     SacarMensajeError();
+                    rp1.setText("");
+                    rp2.setText("");
                 }
             }
         });

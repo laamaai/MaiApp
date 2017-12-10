@@ -49,6 +49,9 @@ public class Cuatro extends Fragment {
         title.setTypeface(font);
         cargarArray();
 
+
+
+
         int n = 0;
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(this.getActivity().openFileInput("NumeroAcertijo.txt")));

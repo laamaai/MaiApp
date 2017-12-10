@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_r"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:orderInCategory="102"
+        android:title="@string/buscar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="104"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="103"
+        android:title="@string/buscar"
+        app:showAsAction="always" />
+
+
+</menu>

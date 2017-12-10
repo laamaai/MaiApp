@@ -2,10 +2,12 @@ package com.example.maider.maiapp;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import me.anwarshahriar.calligrapher.Calligrapher;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
@@ -31,9 +35,22 @@ public class Siete extends Fragment {
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         View view = inflater.inflate(R.layout.fragment_siete, container, false);
-        btnAceptar = (Button) view.findViewById(R.id.btnCorregir);
-    rp1 = (EditText)view.findViewById(R.id.r1) ;
-    rp2 = (EditText)view.findViewById(R.id.r2);
+
+        String font_path = "font/Londrina.ttf";
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
+        TextView title = (TextView)view.findViewById(R.id.txtAcertijo3);
+        title.setText(R.string.acertijo3);
+        scrollable = (TextView) view.findViewById(R.id.txtAcertijo3);
+        scrollable.setMovementMethod(new ScrollingMovementMethod());
+        title.setTypeface(font);
+
+        btnAceptar = (Button) view.findViewById(R.id.btnAceptar);
+        Calligrapher cali = new Calligrapher(getActivity());
+        cali.setFont(getActivity(),"font/Londrina.ttf",true);
+
+        rp1 = (EditText)view.findViewById(R.id.r1) ;
+        rp2 = (EditText)view.findViewById(R.id.r2);
+
 
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override

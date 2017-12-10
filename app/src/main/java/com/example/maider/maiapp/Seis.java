@@ -2,10 +2,12 @@ package com.example.maider.maiapp;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import me.anwarshahriar.calligrapher.Calligrapher;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
@@ -32,6 +36,20 @@ public class Seis extends Fragment {
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         final View view = inflater.inflate(R.layout.fragment_seis, container, false);
+        String font_path = "font/Londrina.ttf";
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
+
+        TextView title = (TextView)view.findViewById(R.id.txtAcertijo2);
+        title.setText(R.string.acertijo2);
+        scrollable = (TextView) view.findViewById(R.id.txtAcertijo2);
+        scrollable.setMovementMethod(new ScrollingMovementMethod());
+        title.setTypeface(font);
+        btnAceptar = (Button) view.findViewById(R.id.btnAceptar);
+        Calligrapher cali = new Calligrapher(getActivity());
+        cali.setFont(getActivity(),"font/Londrina.ttf",true);
+
+
+
 
         t1 = (TextView)view.findViewById(R.id.n1);
         t2 = (TextView)view.findViewById(R.id.n2);
@@ -65,6 +83,15 @@ public class Seis extends Fragment {
                     nxt.setVisibility(View.VISIBLE);
                 }else{
                     SacarMensajeError();
+                    t1.setText("");
+                    t2.setText("");
+                    t3.setText("");
+                    t4.setText("");
+                    t5.setText("");
+                    t6.setText("");
+                    t7.setText("");
+                    t8.setText("");
+                    t9.setText("");
                 }
             }
         });
