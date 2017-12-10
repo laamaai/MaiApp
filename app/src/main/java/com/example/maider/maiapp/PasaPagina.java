@@ -17,6 +17,8 @@ import android.widget.ImageView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class PasaPagina extends AppCompatActivity {
 
     ViewPager mPager;
@@ -27,6 +29,9 @@ public class PasaPagina extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasa_pagina);
+
+        //Poner la pantalla de forma vertical
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());

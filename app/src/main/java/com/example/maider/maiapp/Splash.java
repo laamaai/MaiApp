@@ -7,11 +7,17 @@ import android.os.Bundle;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class Splash extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2500;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Poner la pantalla de forma vertical
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+
         setContentView(R.layout.activity_splash);
         Calligrapher cali = new Calligrapher(this);
         cali.setFont(this,"font/Londrina.ttf",true);

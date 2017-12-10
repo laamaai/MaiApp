@@ -10,11 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 
 public class main_dos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //Poner la pantalla de forma vertical
+        getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+
         View rootView = inflater.inflate(R.layout.fragment_main_dos, container, false);
 
         String font_path = "font/Londrina.ttf";

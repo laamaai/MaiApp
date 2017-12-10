@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 
 public class Ocho extends Fragment {
 
@@ -25,6 +27,10 @@ public class Ocho extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //Poner la pantalla de forma vertical
+        getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+
         View view = inflater.inflate(R.layout.fragment_ocho, container, false);
 
         //btnAceptar = (Button) view.findViewById(R.id.btnAceptar);

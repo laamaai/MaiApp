@@ -24,6 +24,8 @@ import java.io.OutputStreamWriter;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 
 public class Cinco extends Fragment {
     private static final String TAG = "FragmentCinco";
@@ -35,6 +37,10 @@ public class Cinco extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //Poner la pantalla de forma vertical
+        getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+
         final View view = inflater.inflate(R.layout.fragment_cinco, container, false);
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);

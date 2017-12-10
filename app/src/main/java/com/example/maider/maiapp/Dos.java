@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 
 public class Dos extends Fragment {
     private static final String TAG = "FragmentDos";
@@ -27,6 +29,9 @@ public class Dos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //Poner la pantalla de forma vertical
+        getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         View view = inflater.inflate(R.layout.fragment_dos, container, false);
         String font_path = "font/Londrina.ttf";
