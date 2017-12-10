@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_main"
     android:background="@drawable/fondo"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.maider.maiapp.Dos">
     <android.support.constraint.ConstraintLayout
