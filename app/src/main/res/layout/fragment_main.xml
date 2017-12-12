@@ -7,11 +7,11 @@
     android:orientation="vertical"
     tools:context="com.example.maider.maiapp.MainActivity$PlaceholderFragment">
 
-<!--
-   <fragment
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/fragCambiar">
-   </fragment>-->
+   <!--
+      <fragment
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/fragCambiar">
+      </fragment>-->
 
 </android.support.constraint.ConstraintLayout>

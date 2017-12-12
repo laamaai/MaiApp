@@ -1,5 +1,6 @@
 package com.example.maider.maiapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -151,6 +152,7 @@ public class PasaPagina extends AppCompatActivity {
             case R.id.action_settings:
                 return true;
             case R.id.action_buscar:
+                irGoogle();
                 return true;
             case R.id.action_r:
                //DE AQUI IR AL ACTIVITY DE IR AL MAPA
@@ -158,9 +160,11 @@ public class PasaPagina extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
 
-
-
+    private void irGoogle() {
+        Intent intent = new Intent(this, Google.class);
+        startActivity(intent);
     }
 
 

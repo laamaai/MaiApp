@@ -48,8 +48,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".PasaPagina"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".CreditosActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".CreditosActivity" />
+        <activity android:name=".Google"></activity>
     </application>
 
 </manifest>

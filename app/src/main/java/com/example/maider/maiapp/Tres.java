@@ -59,9 +59,9 @@ public class Tres extends Fragment {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        //videoView.setOnPreparedListener(videoViewListener);
+        videoView.setOnPreparedListener(videoViewListener);
     }
-/*
+
     private MediaPlayer.OnPreparedListener videoViewListener = new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mediaPlayer) {
@@ -74,7 +74,7 @@ public class Tres extends Fragment {
                 }
     };
 
-  /*  @Override
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt("Position",
