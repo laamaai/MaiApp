@@ -172,9 +172,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Toast.LENGTH_SHORT).show();
 
         //Progress bar de la distancia que les queda
-        DistanciaBarraProgreso(distance);
+       // DistanciaBarraProgreso(distance);
 
         //Sacamos la activity segun la pista
+        /*
         if(distance <= 5){
             switch (PistaLocalizacion){
                 case 1:
@@ -183,7 +184,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 case 4:
                 case 5:
             }
-        }
+        }*/
 
         //move map camera
         if (cont == 0) {
