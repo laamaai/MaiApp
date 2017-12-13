@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_r"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:orderInCategory="102"
-        android:title="@string/buscar"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_settings"
         android:orderInCategory="104"
         android:title="@string/action_settings"

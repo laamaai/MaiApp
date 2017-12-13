@@ -67,11 +67,12 @@ public class Tres extends Fragment {
                 public void onPrepared(MediaPlayer mediaPlayer) {
                     mediaPlayer.setLooping(true);
                     if (position == 0) {
-                        videoView.start();
+                        videoView.pause();
                     } else {
                         videoView.pause();
                     }
                 }
+
     };
 
     @Override

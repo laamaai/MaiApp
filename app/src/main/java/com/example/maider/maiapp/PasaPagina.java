@@ -154,9 +154,6 @@ public class PasaPagina extends AppCompatActivity {
             case R.id.action_buscar:
                 irGoogle();
                 return true;
-            case R.id.action_r:
-               //DE AQUI IR AL ACTIVITY DE IR AL MAPA
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
