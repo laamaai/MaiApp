@@ -2,11 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/frcambiar"
     android:background="@drawable/fondo"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.maider.maiapp.Cuatro">
+    tools:context="com.example.maider.maiapp.cuatro5">
 
     <TextView
         android:id="@+id/txtPista"
@@ -19,7 +17,7 @@
         android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="sp"
+        android:textSize="22sp"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

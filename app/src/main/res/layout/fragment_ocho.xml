@@ -19,7 +19,7 @@
         android:background="#51000000"
         android:scrollbars="vertical"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
