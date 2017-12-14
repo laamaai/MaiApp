@@ -1,6 +1,8 @@
 package com.example.maider.maiapp;
 
+import android.content.ClipData;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -27,11 +29,17 @@ public class PasaPagina extends AppCompatActivity {
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
     int page = 0;
-
+    MediaPlayer mp;
+    boolean m = true;
+    boolean activada = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasa_pagina);
+        mp = MediaPlayer.create(this, R.raw.musicaf);
+        mp.start();
+        m = true;
+
 
         //Poner la pantalla de forma vertical
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
@@ -154,14 +162,32 @@ public class PasaPagina extends AppCompatActivity {
             case R.id.action_buscar:
                 irGoogle();
                 return true;
+            case R.id.action_musica:
+                musica();
+                return true;
+            case R.id.action_mute:
+                iniciarMusica();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    private void iniciarMusica() {
+        findViewById(R.id.action_musica).setVisibility(View.VISIBLE);
+        findViewById(R.id.action_mute).setVisibility(View.GONE);
+        mp.start();
+    }
+
     private void irGoogle() {
         Intent intent = new Intent(this, Google.class);
         startActivity(intent);
+    }
+
+    private void musica(){
+        findViewById(R.id.action_mute).setVisibility(View.VISIBLE);
+        findViewById(R.id.action_musica).setVisibility(View.GONE);
+        mp.stop();
     }
 
 
@@ -185,19 +211,19 @@ public class PasaPagina extends AppCompatActivity {
                 case 4:
                     return new Cinco();
                 case 5:
-                    return new Cuatro();
+                    return new cuatro2();
                 case 6:
                     return new Seis();
                 case 7:
-                    return new Cuatro();
+                    return new cuatro3();
                 case 8:
                     return new Siete();
                 case 9:
-                    return new Cuatro();
+                    return new cuatro4();
                 case 10:
                     return new Ocho();
                 case 11:
-                    return new Cuatro();
+                    return new cuatro5();
                 case 12:
                     return new Nueve();
                     //case 13:
@@ -212,4 +238,38 @@ public class PasaPagina extends AppCompatActivity {
             return 13;
         }
     }
+
+    public void onPause(){
+        super.onPause();
+        if (m == true){
+            mp.stop();
+            activada = true;
+        }else{
+            activada = false;
+        }
+    }
+
+    public void onResume(){
+        super.onResume();
+        if (m == true){
+            mp.start();
+        }
+    }
+
+    public void onDestroy(){
+        super.onDestroy();
+        if (m == true){
+            mp.stop();
+        }
+    }
+
+    public void onRestart(){
+        super.onRestart();
+        if(activada == true){
+            mp.start();
+        }
+    }
+
+
+
 }

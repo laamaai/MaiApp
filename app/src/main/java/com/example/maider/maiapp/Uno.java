@@ -2,6 +2,7 @@ package com.example.maider.maiapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,9 +27,7 @@ public class Uno extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //Poner la pantalla de forma vertical
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
         View view = inflater.inflate(R.layout.fragment_uno, container, false);
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
@@ -38,9 +37,13 @@ public class Uno extends Fragment {
        // cali.setFont(getActivity(),"font/Londrina.ttf",true);
         return view;
     }
-   // public boolean onTouchEvent(MotionEvent event){
-    //    Intent intent = new Intent(getActivity(), Dos.class);
+        // public boolean onTouchEvent(MotionEvent event){
+         //    Intent intent = new Intent(getActivity(), Dos.class);
       //  startActivity(intent);
      //   return super.onTouchEvent(event);
    // }
+
+
+
+
 }

@@ -2,6 +2,7 @@ package com.example.maider.maiapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,15 +32,15 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
 public class Cuatro extends Fragment {
     private static final String TAG = "FragmentCuatro";
+    public static int pistaActual = 0;
     ArrayList<String> pistas = new ArrayList<String>();
+
     Button IrMapa;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Poner la pantalla de forma vertical
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
         View view = inflater.inflate(R.layout.fragment_cuatro, container, false);
         Calligrapher cali = new Calligrapher(getActivity());
         cali.setFont(getActivity(), "font/Londrina.ttf", true);
@@ -47,42 +48,23 @@ public class Cuatro extends Fragment {
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
         TextView title = (TextView) view.findViewById(R.id.txtPista);
         title.setTypeface(font);
-        cargarArray();
+        //cargarArray();
+        title.setText(getResources().getString(R.string.pista1));
 
-
-
-
-        int n = 0;
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(this.getActivity().openFileInput("NumeroAcertijo.txt")));
-            StringBuilder texto = new StringBuilder();
-            while (br.readLine() != null) {
-                texto.append(br.readLine());
-            }
-            br.close();
-            n = Integer.parseInt(texto.toString());
-
-            OutputStreamWriter fout = new OutputStreamWriter(getActivity().openFileOutput("NumeroAcertijo.txt", Context.MODE_PRIVATE));
-            int num = n+1;
-            fout.write(""+num);
-            fout.close();
-
-            /*
-            InputStreamReader in = new InputStreamReader(this.getResources().openRawResource(R.raw.numeros));
-            BufferedReader br = new BufferedReader(in);
-            String linea;
-            StringBuilder texto = new StringBuilder();
-            while ((linea = br.readLine())!=null){
-                texto.append(linea);
-            }
-            br.close();
-            in.close();
-            n = Integer.parseInt(texto.toString());*/
-        } catch (IOException e) {
-            e.printStackTrace();
+/*
+        if (pistaActual == 0){
+            this.leerEstado();
+                if (pistaActual !=0){
+                    pistaActual +=1;
+                }else{
+                    TextView txt = (TextView) view.findViewById(R.id.txtPista);
+                    txt.setText(pistas.get(pistaActual));
+                }
         }
-        TextView txt = (TextView) view.findViewById(R.id.txtPista);
-        txt.setText(pistas.get(n));
+
+        this.escribirEstado(pistaActual);*/
+
+
         IrMapa = (Button) view.findViewById(R.id.btnAvanzarMapa);
         IrMapa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +85,17 @@ public class Cuatro extends Fragment {
         pistas.add(4,getResources().getString(R.string.pista5));
     }
 
-    //ProgressBar progress = new ProgressBar(getActivity());
+   /* public void leerEstado(){
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        long highScore = sharedPref.getInt("pista", pistaActual);
+        pistaActual = (int) highScore;
+    }
 
+    public void escribirEstado(int pista){
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("pista", pista);
+        editor.apply();
+    }
+*/
 }

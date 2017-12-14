@@ -7,12 +7,24 @@
         android:orderInCategory="104"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_musica"
+        android:icon="@android:drawable/ic_lock_silent_mode_off"
+        android:orderInCategory="106"
+        android:title="@string/musica"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_mute"
+        android:icon="@android:drawable/ic_lock_silent_mode"
+        android:orderInCategory="105"
+        android:title="@string/musica"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_buscar"
         android:icon="@android:drawable/ic_menu_search"
-        android:orderInCategory="103"
+        android:orderInCategory="107"
         android:title="@string/buscar"
         app:showAsAction="always" />
-
 
 </menu>

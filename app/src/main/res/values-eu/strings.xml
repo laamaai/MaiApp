@@ -129,5 +129,6 @@ bertzerik ez dugu bion artean…
     <string name = "acertijoRespuesta3">01/01</string>
     <string name = "acertijoRespuesta4">204862</string>
     <string name = "acertijoRespuesta5"> 4-4 </string>
+    <string name="musica" />
 
 </resources>

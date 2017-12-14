@@ -23,6 +23,7 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
 public class Siete extends Fragment {
     private static final String TAG = "FragmentSiete";
+
     TextView scrollable;
     private EditText rp1, rp2;
     private Button btnAceptar;
