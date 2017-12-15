@@ -20,14 +20,13 @@ public class main_dos extends Fragment {
 
         //Poner la pantalla de forma vertical
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
         View rootView = inflater.inflate(R.layout.fragment_main_dos, container, false);
-
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
-
         TextView title = (TextView)rootView.findViewById(R.id.section_label);
         title.setTypeface(font);
+        TextView btn =  (TextView)rootView.findViewById(R.id.btnWeb);
+        btn.setTypeface(font);
 
         return rootView;
     }

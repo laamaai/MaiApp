@@ -33,7 +33,6 @@ public class Dos extends Fragment {
 
         //Poner la pantalla de forma vertical
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
         View view = inflater.inflate(R.layout.fragment_dos, container, false);
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
@@ -43,7 +42,6 @@ public class Dos extends Fragment {
        // cali.setFont(getActivity(),"font/Londrina.ttf",true);
         scrollable = (TextView) view.findViewById(R.id.txtt);
         scrollable.setMovementMethod(new ScrollingMovementMethod());
-
         //ImageButton btn = (ImageButton)view.findViewById(R.id.btnPlay);
        // btn.setOnClickListener(new View.OnClickListener(){
         //    public void onClick(View v){

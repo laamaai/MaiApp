@@ -27,7 +27,6 @@ public class main_uno extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_main_uno, container, false);
         TextView btn = (TextView)rootView.findViewById(R.id.button);
-
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -36,13 +35,12 @@ public class main_uno extends Fragment {
             }
 
         });
-
         String font_path = "font/Londrina.ttf";
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
-
         TextView title = (TextView)rootView.findViewById(R.id.button);
         title.setTypeface(font);
-
+        TextView t2 = (TextView)rootView.findViewById(R.id.txtPresentacion);
+        t2.setTypeface(font);
         return rootView;
     }
 

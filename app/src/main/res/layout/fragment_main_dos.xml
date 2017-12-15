@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/section_label"
-        android:layout_width="325dp"
-        android:layout_height="429dp"
+        android:layout_width="295dp"
+        android:layout_height="273dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="#42000000"
@@ -19,13 +19,33 @@
         android:textColor="@android:color/background_light"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.224"
+        app:layout_constraintVertical_bias="0.121"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
+
+
+    <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:text="@string/web"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
 </android.support.constraint.ConstraintLayout>

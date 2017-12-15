@@ -48,6 +48,9 @@ public class Cuatro extends Fragment {
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
         TextView title = (TextView) view.findViewById(R.id.txtPista);
         title.setTypeface(font);
+
+        TextView btn = (TextView)view.findViewById(R.id.btnAvanzarMapa);
+        btn.setTypeface(font);
         //cargarArray();
         title.setText(getResources().getString(R.string.pista1));
 

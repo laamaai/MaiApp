@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.example.maider.maiapp.PasaPagina">
 
     <android.support.v4.view.ViewPager
@@ -16,7 +16,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+    </android.support.v4.view.ViewPager>
 
     <ImageButton
         android:id="@+id/intro_btn_next"
@@ -26,9 +27,9 @@
         android:layout_gravity="end|center"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
+        android:contentDescription="@string/siguiente"
         android:padding="@dimen/activity_horizontal_margin"
         android:src="@drawable/next"
-        android:contentDescription="@string/siguiente"
         android:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -49,6 +50,23 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/fin"
+
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 

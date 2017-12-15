@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="fin">AMAITU</string>
   <string name="str_button">Aldatu hizkuntza</string>
   <string name="action_settings">Ezarpenak</string>
   <string name="inicio">Hasiera</string>
@@ -7,7 +8,7 @@
     <string name="buscar">Bilatu</string>
     <string name="txtInformacion">INFORMAZIOA</string>
   <string name="respuesta">Erantzuna</string>
-    <string name="jugar">Jolastu</string>
+    <string name="jugar">Hasi jolasten</string>
     <string name="irMapa">Mapara joan</string>
     <string name="antigua">Zaharra</string>
     <string name="nueva">Berria</string>
@@ -17,6 +18,7 @@
     <string name="anterior">Aurrekoa</string>
     <string name="sat">Satelite</string>
     <string name="nor">Normala</string>
+    <string name="web">Bisitatu gure Web-a</string>
     <string name="presentacion">"Aupa. \n Desafioka ari zaizkizu nobela beltzeko idazle nafarrak. \n \n Ongi etorri erronkara. "</string>
   <string name="large_text">
     "Iruña.\n"

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="fin">FIN</string>
     <string name="str_textview">Hola Mundo!!!</string>
     <string name="str_button">Cambiar Idioma</string>
     <string name="action_settings">Ajustes</string>
     <string name="buscar">Buscar</string>
     <string name="txtInformacion">INFORMACION</string>
     <string name="inicio">Inicio</string>
-    <string name="jugar">Jugar</string>
+    <string name="jugar">Empezar a jugar</string>
     <string name="informacion"> Informacion </string>
     <string name="respuesta">Respuesta</string>
     <string name="irMapa">Ir al Mapa</string>
@@ -14,13 +15,11 @@
     <string name="anterior">Anterior</string>
     <string name="sat">Satélite</string>
     <string name="nor">Normal</string>
-
     <string name="barra">/</string>
     <string name="antigua">Antigua</string>
     <string name="nueva">Nueva</string>
-
     <string name="comp">Comprobar</string>
-
+    <string name="web">Visitar nuestra página web</string>
  <string name="large_text">
         "Pamplona.\n "
         "Enero, 2018,9:00 h. \n \n"
@@ -66,7 +65,7 @@
         "Tras unos segundos, en los que escuché a mi interlocutor teclear en el ordenador, la voz regresó: \n"
         "-Servicio de Atención al Cliente: Disculpe la espera. A partir de este instante, su clave ya es otra. ¿Desea algo más? \n "
         "-Yo: No, muchas gracias. \n"
-        "Al teclear la nueva clave, pude al fin sacar dinero. \n\n <font color="#B40431">¿Cuál era la antigua y cuál es la nueva?</font> \n \n"
+        "Al teclear la nueva clave, pude al fin sacar dinero. \n\n ¿Cuál era la antigua y cuál es la nueva? \n \n"
     </string>
 
     <string name="acertijo2">

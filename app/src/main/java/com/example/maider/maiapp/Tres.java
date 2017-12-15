@@ -2,6 +2,7 @@ package com.example.maider.maiapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,8 +37,10 @@ public class Tres extends Fragment {
         getActivity().setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         View view = inflater.inflate(R.layout.fragment_tres, container, false);
-        Calligrapher cali = new Calligrapher(getActivity());
-        cali.setFont(getActivity(),"font/Londrina.ttf",true);
+        String font_path = "font/Londrina.ttf";
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), font_path);
+        TextView title = (TextView) view.findViewById(R.id.textView6);
+        title.setTypeface(font);
 
         setUpVideoView(view);
 
@@ -65,7 +68,7 @@ public class Tres extends Fragment {
     private MediaPlayer.OnPreparedListener videoViewListener = new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mediaPlayer) {
-                    mediaPlayer.setLooping(true);
+                    mediaPlayer.setLooping(false);
                     if (position == 0) {
                         videoView.pause();
                     } else {
