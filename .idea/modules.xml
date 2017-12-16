@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MaiApp.iml" filepath="$PROJECT_DIR$/MaiApp.iml" />
       <module fileurl="file://C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\PamplonaNegra\MaiApp.iml" filepath="C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\PamplonaNegra\MaiApp.iml" />
+      <module fileurl="file://C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\MaiApp\MaiApp.iml" filepath="C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\MaiApp\MaiApp.iml" />
       <module fileurl="file://C:\Users\Maider\AndroidStudioProjects\MaiApp\PamplonaNegra.iml" filepath="C:\Users\Maider\AndroidStudioProjects\MaiApp\PamplonaNegra.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\MaiApp\app\app.iml" filepath="C:\Users\lopez\AndroidStudioProjects\PamplonaNegraApp\MaiApp\app\app.iml" />
     </modules>
   </component>
 </project>
