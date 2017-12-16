@@ -3,7 +3,7 @@
     <string name="fin">FIN</string>
     <string name="str_textview">Hola Mundo!!!</string>
     <string name="str_button">Cambiar Idioma</string>
-    <string name="action_settings">Ajustes</string>
+    <string name="action_settings">Idioma</string>
     <string name="buscar">Buscar</string>
     <string name="txtInformacion">INFORMACION</string>
     <string name="inicio">Inicio</string>
@@ -127,5 +127,5 @@
     <string name = "acertijoRespuesta3"> 01/01</string>
     <string name = "acertijoRespuesta4">204862</string>
     <string name = "acertijoRespuesta5">4-4</string>
-    <string name="musica" />
+    <string name="musica"> Música </string>
 </resources>

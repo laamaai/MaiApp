@@ -1,24 +1,33 @@
 package com.example.maider.maiapp;
 
+import android.annotation.TargetApi;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.media.MediaPlayer;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.util.Locale;
+
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
-public class PasaPagina extends AppCompatActivity {
+public class PasaPagina extends AppCompatActivity{
 
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
@@ -26,8 +35,10 @@ public class PasaPagina extends AppCompatActivity {
     MediaPlayer mp;
     boolean m = true;
     boolean activada = true;
-
     Button btnMute;
+    private Configuration config = new Configuration();
+    int idioma;
+    int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +47,14 @@ public class PasaPagina extends AppCompatActivity {
         mp = MediaPlayer.create(this, R.raw.musicaf);
         mp.setLooping(true);
         mp.start();
-        m = true;
+
+        if (num == 1){
+            mp.stop();
+        }else{
+            mp.start();
+            mp.setLooping(true);
+        }
+
 
         btnMute = (Button)findViewById(R.id.action_musica);
 
@@ -49,7 +67,8 @@ public class PasaPagina extends AppCompatActivity {
 
         final ImageButton bck = (ImageButton)findViewById(R.id.intro_btn_back);
         final ImageButton nxt = (ImageButton)findViewById(R.id.intro_btn_next);
-    final Button btn = (Button)findViewById(R.id.button2);
+        final Button btn = (Button)findViewById(R.id.button2);
+
         Calligrapher cali = new Calligrapher(this);
         cali.setFont(this,"font/Londrina.ttf",true);
 
@@ -178,32 +197,81 @@ public class PasaPagina extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
+                showDialog();
                 return true;
             case R.id.action_buscar:
                 irGoogle();
                 return true;
-           // case R.id.action_musica:
-           //     findViewById(R.id.action_musica).setVisibility(View.GONE);
-           //     findViewById(R.id.action_mute).setVisibility(View.VISIBLE);
-          //      mp.stop();
-            //return true;
-          //  case R.id.action_mute:
-            //    findViewById(R.id.action_musica).setVisibility(View.VISIBLE);
-            //    findViewById(R.id.action_mute).setVisibility(View.GONE);
-             //   mp.start();
-            //    return true;
+            case R.id.action_musica:
+                showMusicaDialog();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void showMusicaDialog() {
+        boolean sonido = false;
+        final String [] items = {"On", "Off"};
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        b.setTitle(R.string.musica)
+                .setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        if (which == 1){
+                            num = 1;
+                            mp.stop();
+                        }else{
+                            mp.start();
+                            num = 0;
+                            //mp.setLooping(true);
+                        }
+
+                    }
+                });
+
+                b.show();
+
+
+    }
+
+
+    private void showDialog() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        b.setTitle(getResources().getString(R.string.str_button));
+        String[] types = getResources().getStringArray(R.array.languages);
+        b.setItems(types, new DialogInterface.OnClickListener() {
+
+            @TargetApi(Build.VERSION_CODES.N)
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent refresh;
+                if (which == 1) {
+                    Locale locale = new Locale("eu");
+                    config.locale = locale;
+                    idioma = 1;
+                } else {
+                    Locale locale = new Locale("es");
+                    config.locale = locale;
+                    idioma = 0;
+                }
+                getResources().updateConfiguration(config, null);
+                refresh = new Intent(PasaPagina.this, PasaPagina.class);
+                startActivity(refresh);
+                finish();
+            }
+
+        });
+        b.show();
     }
 
     private void irGoogle() {
         Intent intent = new Intent(this, Google.class);
         startActivity(intent);
     }
-
-
-
 
     public class SlidePagerAdapter extends FragmentPagerAdapter {
         public SlidePagerAdapter(FragmentManager fm) {

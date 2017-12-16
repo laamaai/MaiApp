@@ -2,7 +2,7 @@
 <resources>
     <string name="fin">AMAITU</string>
   <string name="str_button">Aldatu hizkuntza</string>
-  <string name="action_settings">Ezarpenak</string>
+  <string name="action_settings">Hizkuntza</string>
   <string name="inicio">Hasiera</string>
   <string name="informacion"> Informazioa </string>
     <string name="buscar">Bilatu</string>
@@ -131,6 +131,6 @@ bertzerik ez dugu bion artean…
     <string name = "acertijoRespuesta3">01/01</string>
     <string name = "acertijoRespuesta4">204862</string>
     <string name = "acertijoRespuesta5"> 4-4 </string>
-    <string name="musica" />
+    <string name="musica"> Musika </string>
 
 </resources>

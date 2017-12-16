@@ -10,14 +10,6 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_mute"
-        android:icon="@drawable/mute"
-        android:orderInCategory="106"
-        android:title="@string/musica"
-        app:showAsAction="always" />
-
-
-    <item
         android:id="@+id/action_buscar"
         android:icon="@drawable/search"
         android:orderInCategory="108"
@@ -28,6 +20,6 @@
         android:icon="@drawable/speaker"
         android:orderInCategory="107"
         android:title="@string/musica"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
 </menu>
