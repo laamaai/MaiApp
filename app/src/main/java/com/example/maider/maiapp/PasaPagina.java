@@ -1,15 +1,10 @@
 package com.example.maider.maiapp;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 
@@ -32,6 +26,9 @@ public class PasaPagina extends AppCompatActivity {
     MediaPlayer mp;
     boolean m = true;
     boolean activada = true;
+
+    Button btnMute;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +38,7 @@ public class PasaPagina extends AppCompatActivity {
         mp.start();
         m = true;
 
+        btnMute = (Button)findViewById(R.id.action_musica);
 
         //Poner la pantalla de forma vertical
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
@@ -184,18 +182,19 @@ public class PasaPagina extends AppCompatActivity {
             case R.id.action_buscar:
                 irGoogle();
                 return true;
-            case R.id.action_musica:
-                musica();
-                return true;
+           // case R.id.action_musica:
+           //     findViewById(R.id.action_musica).setVisibility(View.GONE);
+           //     findViewById(R.id.action_mute).setVisibility(View.VISIBLE);
+          //      mp.stop();
+            //return true;
+          //  case R.id.action_mute:
+            //    findViewById(R.id.action_musica).setVisibility(View.VISIBLE);
+            //    findViewById(R.id.action_mute).setVisibility(View.GONE);
+             //   mp.start();
+            //    return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void iniciarMusica() {
-        findViewById(R.id.action_musica).setVisibility(View.VISIBLE);
-        findViewById(R.id.action_mute).setVisibility(View.GONE);
-        mp.start();
     }
 
     private void irGoogle() {
@@ -203,13 +202,7 @@ public class PasaPagina extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void musica(){
 
-
-        findViewById(R.id.action_mute).setVisibility(View.VISIBLE);
-        findViewById(R.id.action_musica).setVisibility(View.GONE);
-        mp.stop();
-    }
 
 
     public class SlidePagerAdapter extends FragmentPagerAdapter {

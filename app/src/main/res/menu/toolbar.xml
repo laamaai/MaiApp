@@ -6,25 +6,28 @@
         android:id="@+id/action_settings"
         android:orderInCategory="104"
         android:title="@string/action_settings"
+        android:icon="@drawable/menu"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_musica"
-        android:icon="@android:drawable/ic_lock_silent_mode_off"
+        android:id="@+id/action_mute"
+        android:icon="@drawable/mute"
         android:orderInCategory="106"
         android:title="@string/musica"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/action_mute"
-        android:icon="@android:drawable/ic_lock_silent_mode"
-        android:orderInCategory="105"
-        android:title="@string/musica"
-        app:showAsAction="always" />
+
+
     <item
         android:id="@+id/action_buscar"
-        android:icon="@android:drawable/ic_menu_search"
-        android:orderInCategory="107"
+        android:icon="@drawable/search"
+        android:orderInCategory="108"
         android:title="@string/buscar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_musica"
+        android:icon="@drawable/speaker"
+        android:orderInCategory="107"
+        android:title="@string/musica"
         app:showAsAction="always" />
 
 </menu>

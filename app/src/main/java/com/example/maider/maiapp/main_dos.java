@@ -1,6 +1,7 @@
 package com.example.maider.maiapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,6 +28,15 @@ public class main_dos extends Fragment {
         title.setTypeface(font);
         TextView btn =  (TextView)rootView.findViewById(R.id.btnWeb);
         btn.setTypeface(font);
+
+        btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Web.class);
+                startActivity(intent);
+            }
+        });
+
 
         return rootView;
     }
